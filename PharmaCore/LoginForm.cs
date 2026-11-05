@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using PharmaCare;
+using PharamaCore;
 
 namespace PharmaCore
 {
@@ -9,43 +9,35 @@ namespace PharmaCore
         public LoginForm()
         {
             InitializeComponent();
-            ActiveControl = txtUsername;
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnSignIn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtUsername.Text) || string.IsNullOrEmpty(txtPassword.Text))
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text;
+
+            if (username == "admin" && password == AppData.DemoPassword)
             {
-                MessageBox.Show("Please enter your username and password.", "Login",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                lblError.Visible = false;
+                Hide();
+                using (DashboardForm dashboard = new DashboardForm())
+                {
+                    dashboard.ShowDialog();
+                }
+                Close();
                 return;
             }
 
-            if (!string.Equals(txtUsername.Text.Trim(), "admin", StringComparison.OrdinalIgnoreCase)
-                || txtPassword.Text != AppData.DemoPassword)
-            {
-                MessageBox.Show("Incorrect username or password.", "Login",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPassword.Clear();
-                txtPassword.Focus();
-                return;
-            }
-
+            lblError.Text = "Invalid username or password.";
+            lblError.Visible = true;
             txtPassword.Clear();
-            chkShowPassword.Checked = false;
-            Hide();
-
-            using (DashboardForm dashboard = new DashboardForm())
-            {
-                dashboard.ShowDialog();
-            }
-
-            Close();
+            txtPassword.Focus();
         }
 
-        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            txtPassword.UseSystemPasswordChar = !chkShowPassword.Checked;
+            MessageBox.Show("Contact the project administrator to reset the password.",
+                "Password recovery", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

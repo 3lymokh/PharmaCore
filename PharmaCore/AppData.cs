@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace PharmaCare
+namespace PharamaCore
 {
     public static class AppData
     {
