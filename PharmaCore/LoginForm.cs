@@ -19,11 +19,13 @@ namespace PharmaCore
             {
                 lblError.Visible = false;
                 Hide();
-                using (DashboardForm dashboard = new DashboardForm())
+                using (DashboardForm dashboard = new DashboardForm(username))
                 {
                     dashboard.ShowDialog();
                 }
-                Close();
+                txtPassword.Clear();
+                Show();
+                txtPassword.Focus();
                 return;
             }
 

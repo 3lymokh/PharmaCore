@@ -19,6 +19,8 @@ namespace PharmaCore
         public DashboardForm(string username)
         {
             InitializeComponent();
+            pnlOverview.AutoScroll = true;
+            pnlOverview.AutoScrollMinSize = pnlOverview.ClientSize;
             MakeRoundedButton(pnlAdmin, 20);
 
             loggedInUser = username;
@@ -121,6 +123,9 @@ namespace PharmaCore
 
             child.TopLevel = false;
             child.FormBorderStyle = FormBorderStyle.None;
+            child.AutoScroll = true;
+            child.AutoScrollMinSize = child.ClientSize;
+            child.MinimumSize = Size.Empty;
             child.Dock = DockStyle.Fill;
 
             pnlChildHost.Controls.Add(child);

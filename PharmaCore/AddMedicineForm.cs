@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PharmaCore
@@ -16,8 +17,14 @@ namespace PharmaCore
 
             cmbCategory.Items.AddRange(new object[]
                 { "Analgesics", "Antibiotics", "Vitamins", "General" });
-            cmbSupplier.Items.AddRange(new object[]
-                { "PharmaCorp", "MedLife", "HealthPlus", "Other" });
+            cmbSupplier.Items.AddRange(AppData.Suppliers
+                .Select(s => string.IsNullOrWhiteSpace(s.Company) ? s.Name : s.Company)
+                .Concat(AppData.Medicines.Select(m => m.Supplier))
+                .Concat(new[] { "PharmaCorp", "MedLife", "HealthPlus", "Other" })
+                .Where(name => !string.IsNullOrWhiteSpace(name))
+                .Distinct()
+                .Cast<object>()
+                .ToArray());
 
             if (editingMedicine != null) LoadExistingMedicine();
         }

@@ -122,11 +122,6 @@ namespace PharmaCore
         {
         }
 
-        private void txtSearchMedicine_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void lbladmin_Click(object sender, EventArgs e)
         {
 

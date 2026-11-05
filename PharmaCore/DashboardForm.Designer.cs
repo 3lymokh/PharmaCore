@@ -108,7 +108,7 @@
             this.lblBrand.Name = "lblBrand";
             this.lblBrand.Size = new System.Drawing.Size(158, 29);
             this.lblBrand.TabIndex = 1;
-            this.lblBrand.Text = "PharmaCare";
+            this.lblBrand.Text = "PharamaCore";
             // 
             // lblRole
             // 
@@ -598,7 +598,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "DashboardForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PharmaCare Dashboard";
+            this.Text = "PharamaCore Dashboard";
             this.pnlSidebar.ResumeLayout(false);
             this.pnlSidebar.PerformLayout();
             this.pnlHeader.ResumeLayout(false);

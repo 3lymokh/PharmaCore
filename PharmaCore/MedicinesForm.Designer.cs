@@ -36,7 +36,7 @@
             this.txtSearchMedicine.Name = "txtSearchMedicine";
             this.txtSearchMedicine.Size = new System.Drawing.Size(490, 44);
             this.txtSearchMedicine.TabIndex = 0;
-            this.txtSearchMedicine.TextChanged += new System.EventHandler(this.txtSearchMedicine_TextChanged_1);
+            this.txtSearchMedicine.TextChanged += new System.EventHandler(this.txtSearchMedicine_TextChanged);
             // 
             // btnSearchMedicine
             // 
