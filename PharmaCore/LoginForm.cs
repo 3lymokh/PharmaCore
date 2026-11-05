@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PharmaCore
@@ -15,6 +8,35 @@ namespace PharmaCore
         public LoginForm()
         {
             InitializeComponent();
+        }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text.Trim();
+            string password = txtPassword.Text;
+
+            if (username == "admin" && password == AppData.DemoPassword)
+            {
+                lblError.Visible = false;
+                Hide();
+                using (DashboardForm dashboard = new DashboardForm())
+                {
+                    dashboard.ShowDialog();
+                }
+                Close();
+                return;
+            }
+
+            lblError.Text = "Invalid username or password.";
+            lblError.Visible = true;
+            txtPassword.Clear();
+            txtPassword.Focus();
+        }
+
+        private void lnkForgotPassword_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Contact the project administrator to reset the password.",
+                "Password recovery", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
