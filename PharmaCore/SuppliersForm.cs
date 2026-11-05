@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-namespace PharmaCare
+namespace PharmaCore
 {
     public partial class SuppliersForm : Form
     {

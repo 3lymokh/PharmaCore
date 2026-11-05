@@ -1,4 +1,4 @@
-﻿using PharmaCare;
+﻿using PharmaCore;
 using System;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -21,7 +21,7 @@ namespace PharmaCore
 
         private void CustomersForm_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void LoadCustomers()
