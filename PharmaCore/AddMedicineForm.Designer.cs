@@ -221,6 +221,7 @@
             this.Name = "AddMedicineForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddMedicineForm";
+            this.Load += new System.EventHandler(this.AddMedicineForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).EndInit();
             this.ResumeLayout(false);

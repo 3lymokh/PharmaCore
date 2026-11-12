@@ -30,8 +30,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudQty)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
             this.SuspendLayout();
-
-
+            // 
+            // lblMedicine
+            // 
             this.lblMedicine.AutoSize = true;
             this.lblMedicine.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMedicine.Location = new System.Drawing.Point(76, 58);
@@ -39,16 +40,18 @@
             this.lblMedicine.Size = new System.Drawing.Size(70, 19);
             this.lblMedicine.TabIndex = 0;
             this.lblMedicine.Text = "Medicine";
-
-
+            // 
+            // cmbMedicines
+            // 
             this.cmbMedicines.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMedicines.FormattingEnabled = true;
             this.cmbMedicines.Location = new System.Drawing.Point(80, 81);
             this.cmbMedicines.Name = "cmbMedicines";
             this.cmbMedicines.Size = new System.Drawing.Size(303, 24);
             this.cmbMedicines.TabIndex = 1;
-
-
+            // 
+            // lblQuantity
+            // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.Location = new System.Drawing.Point(414, 60);
@@ -56,14 +59,16 @@
             this.lblQuantity.Size = new System.Drawing.Size(65, 19);
             this.lblQuantity.TabIndex = 2;
             this.lblQuantity.Text = "Quantity";
-
-
+            // 
+            // nudQty
+            // 
             this.nudQty.Location = new System.Drawing.Point(417, 83);
             this.nudQty.Name = "nudQty";
             this.nudQty.Size = new System.Drawing.Size(120, 22);
             this.nudQty.TabIndex = 3;
-
-
+            // 
+            // btnAddToCart
+            // 
             this.btnAddToCart.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnAddToCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddToCart.ForeColor = System.Drawing.SystemColors.ControlLightLight;
@@ -74,8 +79,9 @@
             this.btnAddToCart.Text = "Add to Cart";
             this.btnAddToCart.UseVisualStyleBackColor = false;
             this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-
-
+            // 
+            // btnRemoveFromCart
+            // 
             this.btnRemoveFromCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRemoveFromCart.ForeColor = System.Drawing.Color.Red;
             this.btnRemoveFromCart.Location = new System.Drawing.Point(678, 70);
@@ -85,8 +91,9 @@
             this.btnRemoveFromCart.Text = "Remove";
             this.btnRemoveFromCart.UseVisualStyleBackColor = true;
             this.btnRemoveFromCart.Click += new System.EventHandler(this.btnRemoveFromCart_Click);
-
-
+            // 
+            // dgvCart
+            // 
             this.dgvCart.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvCart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCart.Location = new System.Drawing.Point(80, 133);
@@ -95,8 +102,9 @@
             this.dgvCart.RowTemplate.Height = 24;
             this.dgvCart.Size = new System.Drawing.Size(693, 210);
             this.dgvCart.TabIndex = 6;
-
-
+            // 
+            // lblWordTotal
+            // 
             this.lblWordTotal.AutoSize = true;
             this.lblWordTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWordTotal.Location = new System.Drawing.Point(77, 400);
@@ -104,8 +112,9 @@
             this.lblWordTotal.Size = new System.Drawing.Size(51, 19);
             this.lblWordTotal.TabIndex = 7;
             this.lblWordTotal.Text = "Total :";
-
-
+            // 
+            // lblTotal
+            // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.Location = new System.Drawing.Point(135, 400);
@@ -113,8 +122,9 @@
             this.lblTotal.Size = new System.Drawing.Size(17, 19);
             this.lblTotal.TabIndex = 8;
             this.lblTotal.Text = "0";
-
-
+            // 
+            // btnCheckout
+            // 
             this.btnCheckout.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnCheckout.ForeColor = System.Drawing.SystemColors.HighlightText;
             this.btnCheckout.Location = new System.Drawing.Point(678, 392);
@@ -124,11 +134,12 @@
             this.btnCheckout.Text = "Checkout";
             this.btnCheckout.UseVisualStyleBackColor = false;
             this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
-
-
+            // 
+            // SalesForm
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnCheckout);
             this.Controls.Add(this.lblTotal);

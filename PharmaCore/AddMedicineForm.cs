@@ -76,5 +76,10 @@ namespace PharmaCore
             DialogResult = DialogResult.Cancel;
             Close();
         }
+
+        private void AddMedicineForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
