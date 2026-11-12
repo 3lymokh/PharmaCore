@@ -10,9 +10,10 @@ namespace PharmaCore
 {
     public partial class ReportsForm : Form
     {
-        public ReportsForm()
+        public ReportsForm(string username)
         {
             InitializeComponent();
+            lblAdmin.Text = username;
             LoadReports();
         }
 
