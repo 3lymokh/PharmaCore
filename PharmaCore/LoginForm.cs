@@ -10,6 +10,27 @@ namespace PharmaCore
             InitializeComponent();
         }
 
+        private void btnShowPassword_Click(object sender, EventArgs e)
+        {
+            int selectionStart = txtPassword.SelectionStart;
+            int selectionLength = txtPassword.SelectionLength;
+
+            txtPassword.UseSystemPasswordChar = !txtPassword.UseSystemPasswordChar;
+            btnShowPassword.Text = txtPassword.UseSystemPasswordChar ? "Show" : "Hide";
+            txtPassword.Focus();
+            txtPassword.Select(selectionStart, selectionLength);
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            btnShowPassword.Enabled = txtPassword.TextLength > 0;
+            if (!btnShowPassword.Enabled)
+            {
+                txtPassword.UseSystemPasswordChar = true;
+                btnShowPassword.Text = "Show";
+            }
+        }
+
         private void btnSignIn_Click(object sender, EventArgs e)
         {
             string username = txtUsername.Text.Trim();
