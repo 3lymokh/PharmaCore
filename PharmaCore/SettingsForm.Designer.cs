@@ -32,9 +32,9 @@
             this.pnlMain.SuspendLayout();
             this.pnlPasswordCard.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // lblTitle
-            //
+            // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(12, 9);
@@ -43,9 +43,10 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Settings";
             this.lblTitle.Click += new System.EventHandler(this.label1_Click);
-            //
+            // 
             // pnlMain
-            //
+            // 
+            this.pnlMain.BackColor = System.Drawing.Color.AliceBlue;
             this.pnlMain.Controls.Add(this.pnlPasswordCard);
             this.pnlMain.Controls.Add(this.lblPageSubtitle);
             this.pnlMain.Controls.Add(this.lblPageTitle);
@@ -54,9 +55,9 @@
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1182, 703);
             this.pnlMain.TabIndex = 2;
-            //
+            // 
             // pnlPasswordCard
-            //
+            // 
             this.pnlPasswordCard.BackColor = System.Drawing.Color.White;
             this.pnlPasswordCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlPasswordCard.Controls.Add(this.btnSave);
@@ -70,9 +71,9 @@
             this.pnlPasswordCard.Name = "pnlPasswordCard";
             this.pnlPasswordCard.Size = new System.Drawing.Size(550, 410);
             this.pnlPasswordCard.TabIndex = 2;
-            //
+            // 
             // btnSave
-            //
+            // 
             this.btnSave.BackColor = System.Drawing.Color.MidnightBlue;
             this.btnSave.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
@@ -83,18 +84,18 @@
             this.btnSave.Text = "Save Changes";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            //
+            // 
             // txtConfirmPassword
-            //
+            // 
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtConfirmPassword.Location = new System.Drawing.Point(25, 298);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.Size = new System.Drawing.Size(450, 31);
             this.txtConfirmPassword.TabIndex = 5;
             this.txtConfirmPassword.UseSystemPasswordChar = true;
-            //
+            // 
             // lblConfirmPassword
-            //
+            // 
             this.lblConfirmPassword.AutoSize = true;
             this.lblConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblConfirmPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -103,18 +104,18 @@
             this.lblConfirmPassword.Size = new System.Drawing.Size(156, 23);
             this.lblConfirmPassword.TabIndex = 4;
             this.lblConfirmPassword.Text = "\tConfirm Password";
-            //
+            // 
             // txtNewPassword
-            //
+            // 
             this.txtNewPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNewPassword.Location = new System.Drawing.Point(25, 175);
             this.txtNewPassword.Name = "txtNewPassword";
             this.txtNewPassword.Size = new System.Drawing.Size(450, 31);
             this.txtNewPassword.TabIndex = 3;
             this.txtNewPassword.UseSystemPasswordChar = true;
-            //
+            // 
             // lblNewPassword
-            //
+            // 
             this.lblNewPassword.AutoSize = true;
             this.lblNewPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNewPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -123,9 +124,9 @@
             this.lblNewPassword.Size = new System.Drawing.Size(126, 23);
             this.lblNewPassword.TabIndex = 2;
             this.lblNewPassword.Text = "New Password";
-            //
+            // 
             // txtCurrentPassword
-            //
+            // 
             this.txtCurrentPassword.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCurrentPassword.Location = new System.Drawing.Point(25, 56);
             this.txtCurrentPassword.Name = "txtCurrentPassword";
@@ -133,9 +134,9 @@
             this.txtCurrentPassword.TabIndex = 1;
             this.txtCurrentPassword.UseSystemPasswordChar = true;
             this.txtCurrentPassword.TextChanged += new System.EventHandler(this.txtCurrentPassword_TextChanged);
-            //
+            // 
             // lblCurrentPassword
-            //
+            // 
             this.lblCurrentPassword.AutoSize = true;
             this.lblCurrentPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCurrentPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -144,9 +145,9 @@
             this.lblCurrentPassword.Size = new System.Drawing.Size(151, 23);
             this.lblCurrentPassword.TabIndex = 0;
             this.lblCurrentPassword.Text = "Current Password";
-            //
+            // 
             // lblPageSubtitle
-            //
+            // 
             this.lblPageSubtitle.AutoSize = true;
             this.lblPageSubtitle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageSubtitle.ForeColor = System.Drawing.Color.Blue;
@@ -155,9 +156,9 @@
             this.lblPageSubtitle.Size = new System.Drawing.Size(177, 17);
             this.lblPageSubtitle.TabIndex = 1;
             this.lblPageSubtitle.Text = "\tPHARMACY MANAGEMENT";
-            //
+            // 
             // lblPageTitle
-            //
+            // 
             this.lblPageTitle.AutoSize = true;
             this.lblPageTitle.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -166,9 +167,9 @@
             this.lblPageTitle.Size = new System.Drawing.Size(177, 54);
             this.lblPageTitle.TabIndex = 0;
             this.lblPageTitle.Text = "Settings";
-            //
+            // 
             // SettingsForm
-            //
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;

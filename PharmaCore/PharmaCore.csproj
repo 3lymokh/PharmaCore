@@ -78,6 +78,9 @@
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Models.cs" />
+    <Compile Include="NavIconBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReportsForm.cs">
@@ -85,6 +88,9 @@
     </Compile>
     <Compile Include="ReportsForm.Designer.cs">
       <DependentUpon>ReportsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SalesBarChart.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SalesForm.cs">
       <SubType>Form</SubType>
@@ -97,6 +103,9 @@
     </Compile>
     <Compile Include="SettingsForm.Designer.cs">
       <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StatIconBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="SuppliersForm.cs">
       <SubType>Form</SubType>

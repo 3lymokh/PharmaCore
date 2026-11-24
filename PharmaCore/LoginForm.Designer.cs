@@ -23,7 +23,6 @@
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.pnlPassword = new System.Windows.Forms.Panel();
-            this.btnShowPassword = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.lnkForgotPassword = new System.Windows.Forms.LinkLabel();
@@ -100,7 +99,7 @@
             this.txtUsername.Location = new System.Drawing.Point(12, 11);
             this.txtUsername.MaxLength = 100;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(312, 20);
+            this.txtUsername.Size = new System.Drawing.Size(312, 25);
             this.txtUsername.TabIndex = 0;
             // 
             // lblPassword
@@ -117,23 +116,11 @@
             this.pnlPassword.AccessibleName = "Password field";
             this.pnlPassword.BackColor = System.Drawing.Color.White;
             this.pnlPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPassword.Controls.Add(this.btnShowPassword);
             this.pnlPassword.Controls.Add(this.txtPassword);
             this.pnlPassword.Location = new System.Drawing.Point(42, 332);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(336, 44);
             this.pnlPassword.TabIndex = 5;
-            // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.Enabled = false;
-            this.btnShowPassword.Location = new System.Drawing.Point(264, 5);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(67, 32);
-            this.btnShowPassword.TabIndex = 1;
-            this.btnShowPassword.Text = "Show";
-            this.btnShowPassword.UseVisualStyleBackColor = true;
-            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
             // txtPassword
             // 
@@ -144,10 +131,9 @@
             this.txtPassword.Location = new System.Drawing.Point(12, 11);
             this.txtPassword.MaxLength = 256;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(240, 20);
+            this.txtPassword.Size = new System.Drawing.Size(312, 25);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnSignIn
             // 
@@ -195,9 +181,9 @@
             // LoginForm
             // 
             this.AcceptButton = this.btnSignIn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(248)))), ((int)(((byte)(254)))));
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(644, 680);
             this.Controls.Add(this.pnlLoginCard);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -228,6 +214,5 @@
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.LinkLabel lnkForgotPassword;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Button btnShowPassword;
     }
 }
