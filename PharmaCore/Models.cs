@@ -12,6 +12,7 @@ namespace PharmaCore
         public string BatchNumber { get; set; }
         public int Quantity { get; set; }
         public decimal UnitPrice { get; set; }
+        public DateTime? ProductionDate { get; set; }
         public DateTime ExpiryDate { get; set; }
         public string Supplier { get; set; }
 

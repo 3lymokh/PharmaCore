@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -14,9 +15,11 @@ namespace PharmaCore
         {
             InitializeComponent();
             editingMedicine = medicine;
+            dtpProductionDate.ShowCheckBox = true;
 
             cmbCategory.Items.AddRange(new object[]
                 { "Analgesics", "Antibiotics", "Vitamins", "General" });
+
             cmbSupplier.Items.AddRange(AppData.Suppliers
                 .Select(s => string.IsNullOrWhiteSpace(s.Company) ? s.Name : s.Company)
                 .Concat(AppData.Medicines.Select(m => m.Supplier))
@@ -26,7 +29,8 @@ namespace PharmaCore
                 .Cast<object>()
                 .ToArray());
 
-            if (editingMedicine != null) LoadExistingMedicine();
+            if (editingMedicine != null)
+                LoadExistingMedicine();
         }
 
         private void LoadExistingMedicine()
@@ -34,11 +38,18 @@ namespace PharmaCore
             txtMedicineName.Text = editingMedicine.Name;
             cmbCategory.Text = editingMedicine.Category;
             txtBatchNumber.Text = editingMedicine.BatchNumber;
+
             nudQuantity.Value = Math.Max(nudQuantity.Minimum,
                 Math.Min(nudQuantity.Maximum, editingMedicine.Quantity));
+
             nudUnitPrice.Value = Math.Max(nudUnitPrice.Minimum,
                 Math.Min(nudUnitPrice.Maximum, editingMedicine.UnitPrice));
+
+            dtpProductionDate.Checked = editingMedicine.ProductionDate.HasValue;
+            if (editingMedicine.ProductionDate.HasValue)
+                dtpProductionDate.Value = editingMedicine.ProductionDate.Value;
             dtpExpiryDate.Value = editingMedicine.ExpiryDate;
+
             cmbSupplier.Text = editingMedicine.Supplier;
         }
 
@@ -48,6 +59,7 @@ namespace PharmaCore
             {
                 MessageBox.Show("Enter a medicine name.", "Missing information",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 txtMedicineName.Focus();
                 return;
             }
@@ -58,14 +70,22 @@ namespace PharmaCore
             };
 
             target.Name = txtMedicineName.Text.Trim();
-            target.Category = cmbCategory.Text.Trim().Length == 0 ? "General" : cmbCategory.Text;
+
+            target.Category = cmbCategory.Text.Trim().Length == 0
+                ? "General"
+                : cmbCategory.Text;
+
             target.BatchNumber = txtBatchNumber.Text.Trim();
             target.Quantity = Decimal.ToInt32(nudQuantity.Value);
             target.UnitPrice = nudUnitPrice.Value;
+
+            target.ProductionDate = dtpProductionDate.Checked ? dtpProductionDate.Value.Date : (DateTime?)null;
             target.ExpiryDate = dtpExpiryDate.Value.Date;
+
             target.Supplier = cmbSupplier.Text.Trim();
 
-            if (editingMedicine == null) AppData.Medicines.Add(target);
+            if (editingMedicine == null)
+                AppData.Medicines.Add(target);
 
             DialogResult = DialogResult.OK;
             Close();
