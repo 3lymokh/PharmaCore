@@ -13,11 +13,9 @@ namespace PharmaCore
 
         private const int EM_SETCUEBANNER = 0x1501;
 
-        public CustomersForm(string username)
+        public CustomersForm()
         {
             InitializeComponent();
-            lblAdmin.Text = username;
-
             LoadCustomers();
         }
 

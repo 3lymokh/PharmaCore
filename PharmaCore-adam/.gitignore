@@ -1,0 +1,11 @@
+# Visual Studio workspace files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+TestResults/

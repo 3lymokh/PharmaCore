@@ -10,7 +10,6 @@ namespace PharmaCore
     public partial class DashboardForm : Form
     {
         private readonly string loggedInUser;
-        private  string adminUsername;
         private Form activeChild;
 
         public DashboardForm() : this("admin")
@@ -125,7 +124,6 @@ namespace PharmaCore
         public DashboardForm(string username)
         {
             InitializeComponent();
-            adminUsername = username;
             pnlOverview.AutoScroll = true;
             pnlOverview.AutoScrollMinSize = pnlOverview.ClientSize;
             MakeRoundedButton(pnlAdmin, 20);
@@ -346,31 +344,31 @@ namespace PharmaCore
         private void btnMedicines_Click(object sender, EventArgs e)
         {
             SetActiveButton(btnMedicines);
-            OpenChildForm(new MedicinesForm(adminUsername));
+            OpenChildForm(new MedicinesForm());
         }
 
         private void btnSales_Click(object sender, EventArgs e)
         {
             SetActiveButton(btnSales);
-            OpenChildForm(new SalesForm(adminUsername));
+            OpenChildForm(new SalesForm());
         }
 
         private void btnCustomers_Click(object sender, EventArgs e)
         {
             SetActiveButton(btnCustomers);
-            OpenChildForm(new CustomersForm(adminUsername));
+            OpenChildForm(new CustomersForm());
         }
 
         private void btnSuppliers_Click(object sender, EventArgs e)
         {
             SetActiveButton(btnSuppliers);
-            OpenChildForm(new SuppliersForm(adminUsername));
+            OpenChildForm(new SuppliersForm());
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
             SetActiveButton(btnReports);
-            OpenChildForm(new ReportsForm(adminUsername));
+            OpenChildForm(new ReportsForm());
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
