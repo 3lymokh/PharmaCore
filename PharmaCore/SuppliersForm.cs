@@ -5,12 +5,7 @@ namespace PharmaCore
 {
     public partial class SuppliersForm : Form
     {
-        public SuppliersForm(string username)
-        {
-            InitializeComponent();
-            lblAdmin.Text = username;
-            LoadSuppliers();
-        }
+        public SuppliersForm() { InitializeComponent(); LoadSuppliers(); }
 
         private void LoadSuppliers()
         {

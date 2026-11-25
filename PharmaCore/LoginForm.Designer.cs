@@ -18,17 +18,18 @@
             this.pnlLoginCard = new System.Windows.Forms.Panel();
             this.lblLogo = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.pnlUsername = new System.Windows.Forms.Panel();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblPassword = new System.Windows.Forms.Label();
             this.pnlPassword = new System.Windows.Forms.Panel();
-            this.btnShowPassword = new System.Windows.Forms.Button();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnSignIn = new System.Windows.Forms.Button();
             this.lnkForgotPassword = new System.Windows.Forms.LinkLabel();
             this.lblError = new System.Windows.Forms.Label();
             this.pnlLoginCard.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlUsername.SuspendLayout();
             this.pnlPassword.SuspendLayout();
             this.SuspendLayout();
@@ -39,6 +40,7 @@
             this.pnlLoginCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlLoginCard.Controls.Add(this.lblLogo);
             this.pnlLoginCard.Controls.Add(this.lblSubtitle);
+            this.pnlLoginCard.Controls.Add(this.picLogo);
             this.pnlLoginCard.Controls.Add(this.lblUsername);
             this.pnlLoginCard.Controls.Add(this.pnlUsername);
             this.pnlLoginCard.Controls.Add(this.lblPassword);
@@ -46,35 +48,48 @@
             this.pnlLoginCard.Controls.Add(this.btnSignIn);
             this.pnlLoginCard.Controls.Add(this.lnkForgotPassword);
             this.pnlLoginCard.Controls.Add(this.lblError);
-            this.pnlLoginCard.Location = new System.Drawing.Point(114, 62);
+            this.pnlLoginCard.Location = new System.Drawing.Point(114, 12);
             this.pnlLoginCard.Name = "pnlLoginCard";
-            this.pnlLoginCard.Size = new System.Drawing.Size(420, 558);
+            this.pnlLoginCard.Size = new System.Drawing.Size(420, 608);
             this.pnlLoginCard.TabIndex = 0;
             // 
             // lblLogo
             // 
-            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 22F);
+            this.lblLogo.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.lblLogo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.lblLogo.Location = new System.Drawing.Point(38, 110);
+            this.lblLogo.Location = new System.Drawing.Point(46, 192);
             this.lblLogo.Name = "lblLogo";
             this.lblLogo.Size = new System.Drawing.Size(340, 44);
             this.lblLogo.TabIndex = 0;
             this.lblLogo.Text = "PharamaCore";
+            this.lblLogo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblSubtitle
             // 
             this.lblSubtitle.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblSubtitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(115)))), ((int)(((byte)(129)))), ((int)(((byte)(138)))));
-            this.lblSubtitle.Location = new System.Drawing.Point(40, 163);
+            this.lblSubtitle.Location = new System.Drawing.Point(41, 236);
             this.lblSubtitle.Name = "lblSubtitle";
             this.lblSubtitle.Size = new System.Drawing.Size(338, 26);
             this.lblSubtitle.TabIndex = 1;
             this.lblSubtitle.Text = "Pharmacy Management System";
+            this.lblSubtitle.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Image = global::PharmaCore.Properties.Resources.Blue_White_Simple_Medical_Pharmacy_Logo;
+            this.picLogo.Location = new System.Drawing.Point(104, 16);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(210, 220);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 1;
+            this.picLogo.TabStop = false;
             // 
             // lblUsername
             // 
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(42, 218);
+            this.lblUsername.Location = new System.Drawing.Point(42, 279);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(336, 22);
             this.lblUsername.TabIndex = 2;
@@ -86,7 +101,7 @@
             this.pnlUsername.BackColor = System.Drawing.Color.White;
             this.pnlUsername.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlUsername.Controls.Add(this.txtUsername);
-            this.pnlUsername.Location = new System.Drawing.Point(42, 244);
+            this.pnlUsername.Location = new System.Drawing.Point(42, 319);
             this.pnlUsername.Name = "pnlUsername";
             this.pnlUsername.Size = new System.Drawing.Size(336, 44);
             this.pnlUsername.TabIndex = 3;
@@ -97,16 +112,16 @@
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.txtUsername.Location = new System.Drawing.Point(12, 11);
+            this.txtUsername.Location = new System.Drawing.Point(3, 14);
             this.txtUsername.MaxLength = 100;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(312, 20);
+            this.txtUsername.Size = new System.Drawing.Size(312, 25);
             this.txtUsername.TabIndex = 0;
             // 
             // lblPassword
             // 
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
-            this.lblPassword.Location = new System.Drawing.Point(42, 306);
+            this.lblPassword.Location = new System.Drawing.Point(42, 366);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(336, 22);
             this.lblPassword.TabIndex = 4;
@@ -117,23 +132,11 @@
             this.pnlPassword.AccessibleName = "Password field";
             this.pnlPassword.BackColor = System.Drawing.Color.White;
             this.pnlPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlPassword.Controls.Add(this.btnShowPassword);
             this.pnlPassword.Controls.Add(this.txtPassword);
-            this.pnlPassword.Location = new System.Drawing.Point(42, 332);
+            this.pnlPassword.Location = new System.Drawing.Point(42, 401);
             this.pnlPassword.Name = "pnlPassword";
             this.pnlPassword.Size = new System.Drawing.Size(336, 44);
             this.pnlPassword.TabIndex = 5;
-            // 
-            // btnShowPassword
-            // 
-            this.btnShowPassword.Enabled = false;
-            this.btnShowPassword.Location = new System.Drawing.Point(264, 5);
-            this.btnShowPassword.Name = "btnShowPassword";
-            this.btnShowPassword.Size = new System.Drawing.Size(67, 32);
-            this.btnShowPassword.TabIndex = 1;
-            this.btnShowPassword.Text = "Show";
-            this.btnShowPassword.UseVisualStyleBackColor = true;
-            this.btnShowPassword.Click += new System.EventHandler(this.btnShowPassword_Click);
             // 
             // txtPassword
             // 
@@ -141,13 +144,12 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(45)))), ((int)(((byte)(61)))));
-            this.txtPassword.Location = new System.Drawing.Point(12, 11);
+            this.txtPassword.Location = new System.Drawing.Point(12, 14);
             this.txtPassword.MaxLength = 256;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(240, 20);
+            this.txtPassword.Size = new System.Drawing.Size(312, 25);
             this.txtPassword.TabIndex = 0;
             this.txtPassword.UseSystemPasswordChar = true;
-            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnSignIn
             // 
@@ -159,7 +161,7 @@
             this.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnSignIn.ForeColor = System.Drawing.Color.White;
-            this.btnSignIn.Location = new System.Drawing.Point(42, 396);
+            this.btnSignIn.Location = new System.Drawing.Point(42, 469);
             this.btnSignIn.Name = "btnSignIn";
             this.btnSignIn.Size = new System.Drawing.Size(336, 46);
             this.btnSignIn.TabIndex = 6;
@@ -172,12 +174,13 @@
             this.lnkForgotPassword.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(84)))), ((int)(((byte)(139)))));
             this.lnkForgotPassword.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lnkForgotPassword.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(112)))), ((int)(((byte)(151)))));
-            this.lnkForgotPassword.Location = new System.Drawing.Point(40, 458);
+            this.lnkForgotPassword.Location = new System.Drawing.Point(40, 529);
             this.lnkForgotPassword.Name = "lnkForgotPassword";
             this.lnkForgotPassword.Size = new System.Drawing.Size(338, 24);
             this.lnkForgotPassword.TabIndex = 7;
             this.lnkForgotPassword.TabStop = true;
-            this.lnkForgotPassword.Text = "? Forgot password";
+            this.lnkForgotPassword.Text = "Forgot password ?";
+            this.lnkForgotPassword.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.lnkForgotPassword.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkForgotPassword_LinkClicked);
             // 
             // lblError
@@ -185,7 +188,7 @@
             this.lblError.AccessibleRole = System.Windows.Forms.AccessibleRole.Alert;
             this.lblError.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblError.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblError.Location = new System.Drawing.Point(42, 378);
+            this.lblError.Location = new System.Drawing.Point(42, 448);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(336, 18);
             this.lblError.TabIndex = 8;
@@ -195,9 +198,9 @@
             // LoginForm
             // 
             this.AcceptButton = this.btnSignIn;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(248)))), ((int)(((byte)(254)))));
+            this.BackColor = System.Drawing.Color.AliceBlue;
             this.ClientSize = new System.Drawing.Size(644, 680);
             this.Controls.Add(this.pnlLoginCard);
             this.Font = new System.Drawing.Font("Segoe UI", 10F);
@@ -208,6 +211,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PharamaCore - Sign in";
             this.pnlLoginCard.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlUsername.ResumeLayout(false);
             this.pnlUsername.PerformLayout();
             this.pnlPassword.ResumeLayout(false);
@@ -228,6 +232,6 @@
         private System.Windows.Forms.Button btnSignIn;
         private System.Windows.Forms.LinkLabel lnkForgotPassword;
         private System.Windows.Forms.Label lblError;
-        private System.Windows.Forms.Button btnShowPassword;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }

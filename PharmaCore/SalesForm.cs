@@ -18,10 +18,9 @@ namespace PharmaCore
             public decimal LineTotal { get { return Quantity * UnitPrice; } }
         }
 
-        public SalesForm(string username)
+        public SalesForm()
         {
             InitializeComponent();
-            lblAdmin.Text = username;
             nudQty.Minimum = 1;
             nudQty.Maximum = 9999;
             dgvCart.ReadOnly = true;

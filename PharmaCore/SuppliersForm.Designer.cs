@@ -29,7 +29,6 @@
             this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lblAdmin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSuppliers)).BeginInit();
             this.SuspendLayout();
@@ -54,7 +53,7 @@
             this.panel1.Location = new System.Drawing.Point(37, 223);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1384, 325);
+            this.panel1.Size = new System.Drawing.Size(1259, 249);
             this.panel1.TabIndex = 0;
             // 
             // label3
@@ -76,9 +75,9 @@
             this.btnDeleteSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDeleteSupplier.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(57)))), ((int)(((byte)(43)))));
-            this.btnDeleteSupplier.Location = new System.Drawing.Point(1230, 182);
+            this.btnDeleteSupplier.Location = new System.Drawing.Point(1167, 162);
             this.btnDeleteSupplier.Name = "btnDeleteSupplier";
-            this.btnDeleteSupplier.Size = new System.Drawing.Size(84, 54);
+            this.btnDeleteSupplier.Size = new System.Drawing.Size(75, 54);
             this.btnDeleteSupplier.TabIndex = 5;
             this.btnDeleteSupplier.Text = "Delete";
             this.btnDeleteSupplier.UseVisualStyleBackColor = false;
@@ -102,7 +101,7 @@
             this.dgvSuppliers.Name = "dgvSuppliers";
             this.dgvSuppliers.RowHeadersWidth = 51;
             this.dgvSuppliers.RowTemplate.Height = 24;
-            this.dgvSuppliers.Size = new System.Drawing.Size(1122, 105);
+            this.dgvSuppliers.Size = new System.Drawing.Size(1122, 54);
             this.dgvSuppliers.TabIndex = 4;
             // 
             // label1
@@ -124,7 +123,7 @@
             this.btnSaveSupplier.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveSupplier.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveSupplier.ForeColor = System.Drawing.Color.White;
-            this.btnSaveSupplier.Location = new System.Drawing.Point(1230, 39);
+            this.btnSaveSupplier.Location = new System.Drawing.Point(1167, 39);
             this.btnSaveSupplier.Name = "btnSaveSupplier";
             this.btnSaveSupplier.Size = new System.Drawing.Size(75, 38);
             this.btnSaveSupplier.TabIndex = 3;
@@ -168,8 +167,8 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label4.Location = new System.Drawing.Point(61, 58);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(191)))));
+            this.label4.Location = new System.Drawing.Point(62, 79);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(275, 28);
             this.label4.TabIndex = 1;
@@ -179,31 +178,20 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Navy;
-            this.label5.Location = new System.Drawing.Point(59, 100);
+            this.label5.Location = new System.Drawing.Point(59, 107);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(169, 46);
             this.label5.TabIndex = 2;
             this.label5.Text = "Suppliers";
             // 
-            // lblAdmin
-            // 
-            this.lblAdmin.AutoSize = true;
-            this.lblAdmin.ForeColor = System.Drawing.Color.Gray;
-            this.lblAdmin.Location = new System.Drawing.Point(1436, 9);
-            this.lblAdmin.Name = "lblAdmin";
-            this.lblAdmin.Size = new System.Drawing.Size(0, 23);
-            this.lblAdmin.TabIndex = 3;
-            // 
             // SuppliersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1515, 1055);
-            this.Controls.Add(this.lblAdmin);
+            this.ClientSize = new System.Drawing.Size(1515, 1044);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
@@ -235,6 +223,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblAdmin;
     }
 }
