@@ -33,6 +33,8 @@
             this.cmbSupplier = new System.Windows.Forms.ComboBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lblProduction = new System.Windows.Forms.Label();
+            this.dtpProductionDate = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudUnitPrice)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +93,7 @@
             // 
             this.lblExpiry.AutoSize = true;
             this.lblExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblExpiry.Location = new System.Drawing.Point(363, 390);
+            this.lblExpiry.Location = new System.Drawing.Point(363, 438);
             this.lblExpiry.Name = "lblExpiry";
             this.lblExpiry.Size = new System.Drawing.Size(112, 25);
             this.lblExpiry.TabIndex = 5;
@@ -148,7 +150,7 @@
             // dtpExpiryDate
             // 
             this.dtpExpiryDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpExpiryDate.Location = new System.Drawing.Point(368, 418);
+            this.dtpExpiryDate.Location = new System.Drawing.Point(368, 476);
             this.dtpExpiryDate.Name = "dtpExpiryDate";
             this.dtpExpiryDate.Size = new System.Drawing.Size(407, 22);
             this.dtpExpiryDate.TabIndex = 11;
@@ -157,7 +159,7 @@
             // 
             this.lblSupplier.AutoSize = true;
             this.lblSupplier.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblSupplier.Location = new System.Drawing.Point(363, 468);
+            this.lblSupplier.Location = new System.Drawing.Point(363, 501);
             this.lblSupplier.Name = "lblSupplier";
             this.lblSupplier.Size = new System.Drawing.Size(84, 25);
             this.lblSupplier.TabIndex = 12;
@@ -167,7 +169,7 @@
             // 
             this.cmbSupplier.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbSupplier.FormattingEnabled = true;
-            this.cmbSupplier.Location = new System.Drawing.Point(368, 496);
+            this.cmbSupplier.Location = new System.Drawing.Point(368, 542);
             this.cmbSupplier.Name = "cmbSupplier";
             this.cmbSupplier.Size = new System.Drawing.Size(407, 24);
             this.cmbSupplier.TabIndex = 13;
@@ -177,7 +179,7 @@
             this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(523, 538);
+            this.btnSave.Location = new System.Drawing.Point(525, 581);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(112, 36);
             this.btnSave.TabIndex = 14;
@@ -189,7 +191,7 @@
             // 
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(652, 538);
+            this.btnCancel.Location = new System.Drawing.Point(663, 581);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(112, 36);
             this.btnCancel.TabIndex = 15;
@@ -197,11 +199,31 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lblProduction
+            // 
+            this.lblProduction.AutoSize = true;
+            this.lblProduction.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lblProduction.Location = new System.Drawing.Point(363, 375);
+            this.lblProduction.Name = "lblProduction";
+            this.lblProduction.Size = new System.Drawing.Size(151, 25);
+            this.lblProduction.TabIndex = 16;
+            this.lblProduction.Text = "Production Date";
+            // 
+            // dtpProductionDate
+            // 
+            this.dtpProductionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpProductionDate.Location = new System.Drawing.Point(368, 403);
+            this.dtpProductionDate.Name = "dtpProductionDate";
+            this.dtpProductionDate.Size = new System.Drawing.Size(407, 22);
+            this.dtpProductionDate.TabIndex = 17;
+            // 
             // AddMedicineForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1109, 649);
+            this.Controls.Add(this.dtpProductionDate);
+            this.Controls.Add(this.lblProduction);
             this.Controls.Add(this.lblmedciine);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
@@ -247,5 +269,7 @@
         private System.Windows.Forms.ComboBox cmbSupplier;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblProduction;
+        private System.Windows.Forms.DateTimePicker dtpProductionDate;
     }
 }
