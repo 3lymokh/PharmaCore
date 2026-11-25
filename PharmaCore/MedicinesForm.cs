@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -52,6 +53,11 @@ namespace PharmaCore
             {
                 dgvMedicines.Columns["UnitPrice"].HeaderText = "Unit Price";
                 dgvMedicines.Columns["UnitPrice"].DefaultCellStyle.Format = "N2";
+            }
+            if (dgvMedicines.Columns.Contains("ProductionDate"))
+            {
+                dgvMedicines.Columns["ProductionDate"].HeaderText = "Production Date";
+                dgvMedicines.Columns["ProductionDate"].DefaultCellStyle.Format = "yyyy-MM-dd";
             }
             if (dgvMedicines.Columns.Contains("ExpiryDate"))
             {

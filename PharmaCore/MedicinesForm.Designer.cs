@@ -53,9 +53,10 @@
             // 
             // btnAddMedicine
             // 
-            this.btnAddMedicine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(112)))), ((int)(((byte)(186)))));
-            this.btnAddMedicine.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAddMedicine.Location = new System.Drawing.Point(687, 141);
+            this.btnAddMedicine.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAddMedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddMedicine.ForeColor = System.Drawing.Color.White;
+            this.btnAddMedicine.Location = new System.Drawing.Point(1043, 141);
             this.btnAddMedicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAddMedicine.Name = "btnAddMedicine";
             this.btnAddMedicine.Size = new System.Drawing.Size(86, 44);
@@ -68,7 +69,7 @@
             // 
             this.btnEditMedicine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(112)))), ((int)(((byte)(186)))));
             this.btnEditMedicine.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnEditMedicine.Location = new System.Drawing.Point(804, 141);
+            this.btnEditMedicine.Location = new System.Drawing.Point(1137, 141);
             this.btnEditMedicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditMedicine.Name = "btnEditMedicine";
             this.btnEditMedicine.Size = new System.Drawing.Size(86, 44);
@@ -81,7 +82,7 @@
             // 
             this.btnDeleteMedicine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
             this.btnDeleteMedicine.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnDeleteMedicine.Location = new System.Drawing.Point(934, 141);
+            this.btnDeleteMedicine.Location = new System.Drawing.Point(1231, 141);
             this.btnDeleteMedicine.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteMedicine.Name = "btnDeleteMedicine";
             this.btnDeleteMedicine.Size = new System.Drawing.Size(86, 44);
@@ -105,18 +106,18 @@
             this.dgvMedicines.ReadOnly = true;
             this.dgvMedicines.RowHeadersWidth = 51;
             this.dgvMedicines.RowTemplate.Height = 24;
-            this.dgvMedicines.Size = new System.Drawing.Size(770, 287);
+            this.dgvMedicines.Size = new System.Drawing.Size(1276, 287);
             this.dgvMedicines.TabIndex = 5;
             this.dgvMedicines.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMedicines_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(62, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(218, 28);
+            this.label1.Size = new System.Drawing.Size(220, 25);
             this.label1.TabIndex = 6;
             this.label1.Text = "Pharmacy Management";
             // 
@@ -127,7 +128,7 @@
             this.label2.ForeColor = System.Drawing.Color.Navy;
             this.label2.Location = new System.Drawing.Point(59, 68);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 46);
+            this.label2.Size = new System.Drawing.Size(177, 45);
             this.label2.TabIndex = 7;
             this.label2.Text = "Medicines";
             // 
@@ -135,8 +136,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.ClientSize = new System.Drawing.Size(1093, 663);
+            this.BackColor = System.Drawing.Color.AliceBlue;
+            this.ClientSize = new System.Drawing.Size(1330, 663);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvMedicines);

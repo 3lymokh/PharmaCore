@@ -16,11 +16,12 @@
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlSidebar = new System.Windows.Forms.Panel();
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblBrand = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
+            this.picLogo = new System.Windows.Forms.PictureBox();
             this.btnOverview = new System.Windows.Forms.Button();
             this.btnMedicines = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
@@ -60,6 +61,7 @@
             this.pnlChildHost = new System.Windows.Forms.Panel();
             this.pnlSidebar.SuspendLayout();
             this.pnlHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).BeginInit();
             this.pnlMainContent.SuspendLayout();
             this.pnlOverview.SuspendLayout();
             this.pnlAdmin.SuspendLayout();
@@ -86,40 +88,53 @@
             this.pnlSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlSidebar.Location = new System.Drawing.Point(0, 0);
             this.pnlSidebar.Name = "pnlSidebar";
-            this.pnlSidebar.Size = new System.Drawing.Size(220, 802);
+            this.pnlSidebar.Size = new System.Drawing.Size(274, 802);
             this.pnlSidebar.TabIndex = 0;
             // 
             // pnlHeader
             // 
             this.pnlHeader.Controls.Add(this.lblBrand);
             this.pnlHeader.Controls.Add(this.lblRole);
+            this.pnlHeader.Controls.Add(this.picLogo);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
             this.pnlHeader.Name = "pnlHeader";
-            this.pnlHeader.Size = new System.Drawing.Size(220, 100);
+            this.pnlHeader.Size = new System.Drawing.Size(274, 155);
             this.pnlHeader.TabIndex = 1;
             // 
             // lblBrand
             // 
             this.lblBrand.AutoSize = true;
-            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBrand.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblBrand.Location = new System.Drawing.Point(42, 28);
+            this.lblBrand.Location = new System.Drawing.Point(37, 96);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(158, 29);
+            this.lblBrand.Size = new System.Drawing.Size(181, 29);
             this.lblBrand.TabIndex = 1;
             this.lblBrand.Text = "PharamaCore";
             // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRole.ForeColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lblRole.Location = new System.Drawing.Point(22, 57);
+            this.lblRole.Location = new System.Drawing.Point(32, 125);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(178, 15);
+            this.lblRole.Size = new System.Drawing.Size(215, 18);
             this.lblRole.TabIndex = 2;
             this.lblRole.Text = "Pharmacy Managment System ";
+            // 
+            // picLogo
+            // 
+            this.picLogo.BackColor = System.Drawing.Color.Transparent;
+            this.picLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.picLogo.Image = global::PharmaCore.Properties.Resources.photo_5778297139044749955_y;
+            this.picLogo.Location = new System.Drawing.Point(0, 0);
+            this.picLogo.Name = "picLogo";
+            this.picLogo.Size = new System.Drawing.Size(274, 113);
+            this.picLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picLogo.TabIndex = 3;
+            this.picLogo.TabStop = false;
             // 
             // btnOverview
             // 
@@ -243,7 +258,7 @@
             this.btnLogout.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.btnLogout.Location = new System.Drawing.Point(0, 772);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(220, 30);
+            this.btnLogout.Size = new System.Drawing.Size(274, 30);
             this.btnLogout.TabIndex = 7;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -254,9 +269,9 @@
             this.pnlMainContent.Controls.Add(this.pnlOverview);
             this.pnlMainContent.Controls.Add(this.pnlChildHost);
             this.pnlMainContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMainContent.Location = new System.Drawing.Point(220, 0);
+            this.pnlMainContent.Location = new System.Drawing.Point(274, 0);
             this.pnlMainContent.Name = "pnlMainContent";
-            this.pnlMainContent.Size = new System.Drawing.Size(1461, 802);
+            this.pnlMainContent.Size = new System.Drawing.Size(1407, 802);
             this.pnlMainContent.TabIndex = 1;
             // 
             // pnlOverview
@@ -275,7 +290,7 @@
             this.pnlOverview.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlOverview.Location = new System.Drawing.Point(0, 0);
             this.pnlOverview.Name = "pnlOverview";
-            this.pnlOverview.Size = new System.Drawing.Size(1461, 802);
+            this.pnlOverview.Size = new System.Drawing.Size(1407, 802);
             this.pnlOverview.TabIndex = 0;
             // 
             // pnlAdmin
@@ -283,7 +298,7 @@
             this.pnlAdmin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlAdmin.BackColor = System.Drawing.Color.White;
             this.pnlAdmin.Controls.Add(this.lblAdmin);
-            this.pnlAdmin.Location = new System.Drawing.Point(1348, 6);
+            this.pnlAdmin.Location = new System.Drawing.Point(1294, 6);
             this.pnlAdmin.Name = "pnlAdmin";
             this.pnlAdmin.Size = new System.Drawing.Size(90, 40);
             this.pnlAdmin.TabIndex = 0;
@@ -494,14 +509,14 @@
             // dgvInventory
             // 
             this.dgvInventory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.BlanchedAlmond;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInventory.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.BlanchedAlmond;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInventory.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInventory.Location = new System.Drawing.Point(35, 85);
             this.dgvInventory.Name = "dgvInventory";
             this.dgvInventory.RowHeadersWidth = 51;
@@ -539,7 +554,7 @@
             this.pnlTotalMedicines.Controls.Add(this.pnlCardTotalMedicines);
             this.pnlTotalMedicines.Controls.Add(this.lblTotalMedicines);
             this.pnlTotalMedicines.Controls.Add(this.lblTotalMedicinesValue);
-            this.pnlTotalMedicines.Location = new System.Drawing.Point(59, 173);
+            this.pnlTotalMedicines.Location = new System.Drawing.Point(59, 174);
             this.pnlTotalMedicines.Name = "pnlTotalMedicines";
             this.pnlTotalMedicines.Size = new System.Drawing.Size(296, 120);
             this.pnlTotalMedicines.TabIndex = 12;
@@ -584,7 +599,7 @@
             this.pnlChildHost.ForeColor = System.Drawing.Color.DimGray;
             this.pnlChildHost.Location = new System.Drawing.Point(0, 0);
             this.pnlChildHost.Name = "pnlChildHost";
-            this.pnlChildHost.Size = new System.Drawing.Size(1461, 802);
+            this.pnlChildHost.Size = new System.Drawing.Size(1407, 802);
             this.pnlChildHost.TabIndex = 0;
             this.pnlChildHost.Visible = false;
             // 
@@ -603,6 +618,7 @@
             this.pnlSidebar.PerformLayout();
             this.pnlHeader.ResumeLayout(false);
             this.pnlHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picLogo)).EndInit();
             this.pnlMainContent.ResumeLayout(false);
             this.pnlOverview.ResumeLayout(false);
             this.pnlOverview.PerformLayout();
@@ -665,5 +681,6 @@
         private System.Windows.Forms.DataGridView dgvInventory;
         private System.Windows.Forms.Panel pnlAdmin;
         private System.Windows.Forms.Label lblAdmin;
+        private System.Windows.Forms.PictureBox picLogo;
     }
 }
