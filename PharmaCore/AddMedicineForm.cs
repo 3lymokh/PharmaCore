@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -17,6 +19,7 @@ namespace PharmaCore
 
             cmbCategory.Items.AddRange(new object[]
                 { "Analgesics", "Antibiotics", "Vitamins", "General" });
+
             cmbSupplier.Items.AddRange(AppData.Suppliers
                 .Select(s => string.IsNullOrWhiteSpace(s.Company) ? s.Name : s.Company)
                 .Concat(AppData.Medicines.Select(m => m.Supplier))
@@ -34,11 +37,16 @@ namespace PharmaCore
             txtMedicineName.Text = editingMedicine.Name;
             cmbCategory.Text = editingMedicine.Category;
             txtBatchNumber.Text = editingMedicine.BatchNumber;
+
             nudQuantity.Value = Math.Max(nudQuantity.Minimum,
                 Math.Min(nudQuantity.Maximum, editingMedicine.Quantity));
+
             nudUnitPrice.Value = Math.Max(nudUnitPrice.Minimum,
                 Math.Min(nudUnitPrice.Maximum, editingMedicine.UnitPrice));
+
+            dtpProductionDate.Value = editingMedicine.ProductionDate;
             dtpExpiryDate.Value = editingMedicine.ExpiryDate;
+
             cmbSupplier.Text = editingMedicine.Supplier;
         }
 
@@ -48,7 +56,21 @@ namespace PharmaCore
             {
                 MessageBox.Show("Enter a medicine name.", "Missing information",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
                 txtMedicineName.Focus();
+                return;
+            }
+
+            if (dtpExpiryDate.Value.Date < dtpProductionDate.Value.Date)
+            {
+                MessageBox.Show(
+                    "Expiry Date cannot be earlier than Production Date.",
+                    "Invalid Dates",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+
+                dtpExpiryDate.Focus();
                 return;
             }
 
@@ -62,7 +84,10 @@ namespace PharmaCore
             target.BatchNumber = txtBatchNumber.Text.Trim();
             target.Quantity = Decimal.ToInt32(nudQuantity.Value);
             target.UnitPrice = nudUnitPrice.Value;
+
+            target.ProductionDate = dtpProductionDate.Value.Date;
             target.ExpiryDate = dtpExpiryDate.Value.Date;
+
             target.Supplier = cmbSupplier.Text.Trim();
 
             if (editingMedicine == null) AppData.Medicines.Add(target);

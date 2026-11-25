@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -22,9 +23,11 @@ namespace PharmaCore
                 BatchNumber = "B101",
                 Quantity = 45,
                 UnitPrice = 12.50m,
+                ProductionDate = DateTime.Today.AddMonths(-6),
                 ExpiryDate = DateTime.Today.AddMonths(12),
                 Supplier = "PharmaCorp"
             });
+
             Medicines.Add(new Medicine
             {
                 Id = 2,
@@ -33,9 +36,11 @@ namespace PharmaCore
                 BatchNumber = "B102",
                 Quantity = 8,
                 UnitPrice = 35.00m,
+                ProductionDate = DateTime.Today.AddMonths(-3),
                 ExpiryDate = DateTime.Today.AddDays(15),
                 Supplier = "MedLife"
             });
+
             Medicines.Add(new Medicine
             {
                 Id = 3,
@@ -44,6 +49,7 @@ namespace PharmaCore
                 BatchNumber = "B103",
                 Quantity = 120,
                 UnitPrice = 20.00m,
+                ProductionDate = DateTime.Today.AddMonths(-4),
                 ExpiryDate = DateTime.Today.AddMonths(8),
                 Supplier = "HealthPlus"
             });
